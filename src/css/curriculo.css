@@ -1,0 +1,89 @@
+main {
+    margin: 2.5vh;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    opacity: 0;
+    width: 95%;
+    height: 75vh;
+    padding: 2% 1%;
+    background-color: var(--background);
+    border-radius: 10px;
+    backdrop-filter: blur(7.5px);
+    overflow: scroll;
+    animation: popUp 1s 0.5s, fadeIn 1s 0.5s forwards;
+}
+
+main::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: var(--scroll);
+    border-radius: 10px;
+}
+
+main section {
+    padding: 0 15px;
+    opacity: 0;
+}
+
+main #esquerda {
+    border-right: 2px solid white;
+    animation: leftToRigth 1s 1.5s, fadeIn 1s 1.5s forwards;
+}
+
+main #direita {
+    animation: rigthToLeft 1s 1.5s, fadeIn 1s 1.5s forwards;
+}
+
+main article {
+    margin-bottom: 10px;
+}
+
+main article h3 {
+    font-size: 3rem;
+    color: var(--texto-secundario);
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+main article h4 {
+    font-size: 2.5rem;
+}
+
+main article p {
+    font-size: 2rem;
+}
+
+footer {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    background-color: var(--background);
+    backdrop-filter: blur(10px);
+    border-radius: 10px 10px 0 0;
+    opacity: 0;
+    animation: fadeIn 1s 2s forwards, bottonToUp 1s 2s;
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        overflow: scroll;
+    }
+    main {
+        display: block;
+    }
+    main section#esquerda,
+    section#direita {
+        animation: fadeIn 1s 1.5s forwards;
+    }
+    main section#esquerda {
+        border: none;
+    }
+}

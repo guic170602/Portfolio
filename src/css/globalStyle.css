@@ -64,9 +64,21 @@ body {
     }
 }
 
+@keyframes bottonToUp {
+    0% {
+        transform: translate(0, 150%);
+    }
+}
+
 @keyframes leftToRigth {
     0% {
         transform: translate(-100%, 0);
+    }
+}
+
+@keyframes rigthToLeft {
+    0% {
+        transform: translate(100%, 0);
     }
 }
 
@@ -88,5 +100,11 @@ body {
     }
     100% {
         max-height: 2000px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+     :root {
+        font-size: 6px;
     }
 }
