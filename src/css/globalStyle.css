@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 body,
 header,
 main,
@@ -28,6 +29,7 @@ span {
 :root {
     color: white;
     font-size: 8px;
+    font-family: 'Source Sans Pro', sans-serif;
     --background: #212229a1;
     --nav: #212229;
     --scroll: #212229;
