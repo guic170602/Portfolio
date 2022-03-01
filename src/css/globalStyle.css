@@ -28,7 +28,8 @@ span {
 :root {
     color: white;
     font-size: 8px;
-    --header: #212229a1;
+    --background: #212229a1;
+    --nav: #212229;
     --scroll: #212229;
     --texto-primario: #fa6c6c;
     --texto-secundario: #aeaeae;
@@ -37,7 +38,7 @@ span {
 body {
     background: url(../img/binary.jpg) fixed no-repeat;
     background-size: cover;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 #overlay {
@@ -79,22 +80,11 @@ body {
     }
 }
 
-@media screen and (max-width: 650px) {
-    body {
-        overflow: visible;
+@keyframes abrir {
+    0% {
+        max-height: 0;
     }
-    body::-webkit-scrollbar {
-        width: 10px;
-        height: 0px;
-    }
-    body::-webkit-scrollbar-thumb {
-        background-color: var(--scroll);
-        border-radius: 10px;
-    }
-}
-
-@media screen and (max-width: 425px) {
-     :root {
-        font-size: 6px;
+    100% {
+        max-height: 2000px;
     }
 }

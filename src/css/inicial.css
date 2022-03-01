@@ -14,17 +14,17 @@ main .containerUser {
     width: 25%;
     align-items: center;
     justify-content: center;
-    animation: leftToRigth 1s 1s;
+    animation: leftToRigth 1s .5s;
 }
 
 main figure {
     width: 90%;
-    background-color: var(--header);
+    background-color: var(--background);
     overflow: hidden;
     border-radius: 100%;
     backdrop-filter: blur(10px);
     opacity: 0;
-    animation: rolar 1s 1s, fadeIn 1.5s 1s forwards;
+    animation: rolar 1s .5s, fadeIn 1.5s .5s forwards;
     border: 1px outset var(--texto-primario);
 }
 
@@ -35,15 +35,15 @@ main figure img {
 }
 
 main .containerAbout {
-    background-color: var(--header);
+    background-color: var(--background);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     padding: 20px;
     width: 70%;
     opacity: 0;
-    max-height: 450px;
+    max-height: 500px;
     overflow-y: scroll;
-    animation: popUp 1s 2.5s, fadeIn 1s 2.5s forwards;
+    animation: popUp 1s 1s, fadeIn 1s 1s forwards;
 }
 
 main .containerAbout::-webkit-scrollbar {
@@ -91,7 +91,8 @@ main .abilities article {
     padding: 5px 7.5px;
     cursor: default;
     margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: .5s linear;
 }
 
 main .abilities i {
@@ -119,18 +120,55 @@ main .abilities i {
     background-color: #62dafc;
 }
 
+footer {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    background-color: var(--background);
+    backdrop-filter: blur(10px);
+    border-radius: 10px 10px 0 0;
+}
+
+@media screen and (max-width: 425px) {
+     :root {
+        font-size: 6px;
+    }
+}
+
 @media screen and (max-width: 650px) {
+    body {
+        overflow: visible;
+    }
+    body::-webkit-scrollbar {
+        width: 10px;
+        height: 0px;
+    }
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--scroll);
+        border-radius: 10px;
+    }
     main .abilities article {
         margin-bottom: 5px;
     }
     main {
         flex-direction: column;
         height: max-content;
-        background-color: var(--header);
+        background-color: var(--background);
         backdrop-filter: blur(10px);
         margin: 5px;
         width: 95vw;
         border-radius: 10px;
+    }
+    main .containerUser {
+        width: 50%;
+    }
+    main .containerUser figure {
+        background-color: transparent;
+        backdrop-filter: none;
     }
     main .containerAbout {
         background-color: transparent;
@@ -139,12 +177,5 @@ main .abilities i {
         margin-top: 10px;
         backdrop-filter: none;
         overflow: visible;
-    }
-    main .containerUser {
-        width: 50%;
-    }
-    main .containerUser figure {
-        background-color: transparent;
-        backdrop-filter: none;
     }
 }
