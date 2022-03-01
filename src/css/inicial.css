@@ -25,7 +25,7 @@ main figure {
     backdrop-filter: blur(10px);
     opacity: 0;
     animation: rolar 1s .5s, fadeIn 1.5s .5s forwards;
-    border: 1px outset var(--texto-primario);
+    border: 3px outset var(--texto-primario);
 }
 
 main figure img {
