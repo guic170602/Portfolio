@@ -1,0 +1,162 @@
+header {
+    background-color: var(--header);
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 1;
+    opacity: 0;
+    align-items: center;
+    box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.357);
+    animation: fadeIn 1s forwards, upToBotton 1s;
+    border-radius: 0 0 10px 10px;
+    position: sticky;
+    top: 0;
+}
+
+.containerMe {
+    text-align: center;
+}
+
+.containerMe h1 {
+    font-size: 3rem;
+    color: var(--texto-primario);
+}
+
+.containerMe h2 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--texto-secundario);
+}
+
+header nav {
+    width: max-content;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+    font-size: 2rem;
+    padding: 5px;
+    margin: 0 10px;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    color: var(--texto-secundario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .1s linear;
+}
+
+header nav ul li a:hover {
+    transform: scale(1.3);
+    color: var(--texto-primario);
+}
+
+header nav ul #atual {
+    color: var(--texto-primario);
+    cursor: default;
+}
+
+header #menu {
+    display: none;
+}
+
+@media screen and (max-width: 805px) {
+    header nav {
+        display: none;
+    }
+    header #menu {
+        position: relative;
+        display: block;
+        margin-right: 10px;
+    }
+    header #menu #check {
+        position: absolute;
+        opacity: 0;
+    }
+    header #menu label {
+        position: absolute;
+        top: -25px;
+        left: -35px;
+        width: 45px;
+        height: 45px;
+        z-index: 1;
+    }
+    header #menu span {
+        position: absolute;
+        background-color: var(--texto-primario);
+        width: 40px;
+        height: 6px;
+        left: -32px;
+        top: -4px;
+        border-radius: 10px;
+        transition: all .3s linear;
+    }
+    header #menu span::after {
+        content: '';
+        position: absolute;
+        background-color: var(--texto-secundario);
+        width: 40px;
+        height: 6px;
+        top: -14px;
+        border-radius: 10px;
+        transition: all .3s linear;
+    }
+    header #menu span::before {
+        content: '';
+        position: absolute;
+        background-color: var(--texto-secundario);
+        width: 40px;
+        height: 6px;
+        top: 14px;
+        border-radius: 10px;
+        transition: all .3s linear;
+    }
+    header #menu #check:checked~span {
+        background-color: transparent;
+    }
+    header #menu #check:checked~span::after {
+        transform: translateY(14px) rotate(-45deg);
+        background-color: var(--texto-primario);
+    }
+    header #menu #check:checked~span::before {
+        transform: translateY(-14px) rotate(45deg);
+        background-color: var(--texto-primario);
+    }
+    .active {
+        display: block;
+        position: absolute;
+        width: 50%;
+        top: 80px;
+        right: 10px;
+        background-color: var(--header);
+        border-radius: 0 0 20px 20px;
+    }
+    .active ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .active ul li {
+        margin: 10px 0;
+    }
+    header .active ul li a {
+        flex-direction: row;
+    }
+    header .active ul li i {
+        margin-right: 7.5px;
+    }
+}
+
+@media screen and (max-width:455px) {
+    header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

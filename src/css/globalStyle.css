@@ -1,0 +1,100 @@
+body,
+header,
+main,
+footer,
+nav,
+section,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+figure,
+img,
+label,
+input,
+span {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    color: white;
+    font-size: 8px;
+    --header: #212229a1;
+    --scroll: #212229;
+    --texto-primario: #fa6c6c;
+    --texto-secundario: #aeaeae;
+}
+
+body {
+    background: url(../img/binary.jpg) fixed no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes upToBotton {
+    0% {
+        transform: translate(0, -150%);
+    }
+}
+
+@keyframes leftToRigth {
+    0% {
+        transform: translate(-100%, 0);
+    }
+}
+
+@keyframes rolar {
+    0% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        overflow: visible;
+    }
+    body::-webkit-scrollbar {
+        width: 10px;
+        height: 0px;
+    }
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--scroll);
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+     :root {
+        font-size: 6px;
+    }
+}
