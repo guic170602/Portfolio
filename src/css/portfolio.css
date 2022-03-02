@@ -123,13 +123,13 @@ footer {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 770px) {
     main #projetos {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
     main #projetos {
         grid-template-columns: repeat(1, 1fr);
     }

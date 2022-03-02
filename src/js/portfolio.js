@@ -4,6 +4,7 @@ const portfolio = function(sites) {
     sites.forEach(site => {
         const projeto = document.createElement('a')
         projeto.href = site.link
+        projeto.target = '_blank'
         projeto.classList.add('projeto')
         const img = document.createElement('img')
         img.src = site.image
@@ -19,6 +20,7 @@ const portfolio = function(sites) {
         div.appendChild(divTitleInfo)
         const linkGitHub = document.createElement('a')
         linkGitHub.href = site.github
+        linkGitHub.target = '_blank'
         const icon = document.createElement('i')
         icon.classList.add('fab')
         icon.classList.add('fa-github')

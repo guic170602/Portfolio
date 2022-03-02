@@ -31,6 +31,13 @@ main #texto {
     margin-bottom: 20px;
 }
 
+main a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
 main article {
     font-size: 3rem;
     width: 60%;
@@ -68,6 +75,22 @@ main article#git {
     animation: rigthToLeft 1s 2.5s, fadeIn 1s 2.5s forwards;
 }
 
+main article#wpp:hover i {
+    color: green
+}
+
+main article#linkedin:hover i {
+    color: #0a66c2;
+}
+
+main article#mail:hover i {
+    color: var(--texto-primario);
+}
+
+main article#git:hover i {
+    color: var(--portfolio);
+}
+
 main article#wpp i,
 main article#mail i {
     font-size: 5rem;
@@ -92,5 +115,38 @@ footer {
     backdrop-filter: blur(10px);
     border-radius: 10px 10px 0 0;
     opacity: 0;
-    animation: fadeIn 1s 2s forwards, bottonToUp 1s 2s;
+    animation: fadeIn 1s 2.5s forwards, bottonToUp 1s 2.5s;
+}
+
+@media screen and (max-width: 1200px) {
+    main article {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    main article {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main article {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    main #texto {
+        font-size: 2rem;
+    }
+    main article {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main article {
+        width: 90%;
+    }
 }
