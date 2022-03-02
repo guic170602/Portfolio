@@ -1,0 +1,136 @@
+main {
+    margin: 2.5vh;
+    align-self: center;
+    opacity: 0;
+    width: 95%;
+    height: 75vh;
+    padding: 2% 1%;
+    background-color: var(--background);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    overflow: scroll;
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+main::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: var(--scroll);
+    border-radius: 10px;
+}
+
+main #upper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main #upper h2 {
+    font-size: 3rem;
+}
+
+main #upper p {
+    font-size: 2.5rem;
+}
+
+main #upper figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main #upper figure img {
+    max-height: 200px;
+    width: 270px;
+}
+
+main #projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main #projetos>a {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--scroll);
+    color: white;
+    opacity: 0;
+}
+
+main #projetos>a:hover {
+    background-color: var(--portfolio);
+}
+
+main #projetos>a img {
+    width: 100%;
+}
+
+main #projetos>a>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+main #projetos>a h3 {
+    color: var(--texto-primario);
+    font-size: 2.5rem;
+}
+
+main #projetos>a p {
+    font-size: 2rem;
+}
+
+main #projetos>a a {
+    position: relative;
+    font-size: 5rem;
+    right: 0;
+    bottom: 0;
+    color: white;
+}
+
+main #projetos>a a:hover {
+    color: var(--scroll);
+}
+
+footer {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    background-color: var(--background);
+    backdrop-filter: blur(10px);
+    border-radius: 10px 10px 0 0;
+    opacity: 0;
+    animation: fadeIn 1s 2.5s forwards, bottonToUp 1s 2.5s;
+}
+
+@media screen and (max-width: 650px) {
+    main {
+        display: block;
+    }
+    main #upper {
+        display: flex;
+        flex-direction: column;
+    }
+    main #upper figure {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main #projetos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main #projetos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

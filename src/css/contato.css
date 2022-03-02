@@ -1,0 +1,40 @@
+main {
+    margin: 2.5vh;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    opacity: 0;
+    width: 95%;
+    height: 75vh;
+    padding: 2% 1%;
+    background-color: var(--background);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    overflow: scroll;
+    animation: popUp 1s 0.5s, fadeIn 1s 0.5s forwards;
+}
+
+main::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: var(--scroll);
+    border-radius: 10px;
+}
+
+footer {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    background-color: var(--background);
+    backdrop-filter: blur(10px);
+    border-radius: 10px 10px 0 0;
+    opacity: 0;
+    animation: fadeIn 1s 2s forwards, bottonToUp 1s 2s;
+}
