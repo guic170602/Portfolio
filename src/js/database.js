@@ -21,7 +21,7 @@
             info: 'Loja de Roupas'
         },
         {
-            link: 'noticias-cidade-taupe.vercel.app',
+            link: 'https://noticias-cidade-taupe.vercel.app',
             github: 'https://github.com/guilherme-colhado/NoticiasCidade',
             image: '../img/noticiascidade.png',
             title: 'Noticias Cidade',
