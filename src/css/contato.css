@@ -1,8 +1,9 @@
 main {
     margin: 2.5vh;
     align-self: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     opacity: 0;
     width: 95%;
     height: 75vh;
@@ -22,6 +23,61 @@ main::-webkit-scrollbar {
 main::-webkit-scrollbar-thumb {
     background-color: var(--scroll);
     border-radius: 10px;
+}
+
+main #texto {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+main article {
+    font-size: 3rem;
+    width: 60%;
+    padding: 20px 15px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+main article:hover {
+    box-shadow: 1px -1px 10px rgba(255, 255, 255, 0.487), -1px 1px 10px rgba(255, 255, 255, 0.487), -1px 0px 10px rgba(255, 255, 255, 0.487), 1px 0px 10px rgba(255, 255, 255, 0.487);
+}
+
+main article#linkedin,
+main article#git {
+    justify-content: end;
+}
+
+main article#wpp {
+    animation: leftToRigth 1s 1s, fadeIn 1s 1s forwards;
+}
+
+main article#linkedin {
+    animation: rigthToLeft 1s 1.5s, fadeIn 1s 1.5s forwards;
+}
+
+main article#mail {
+    animation: leftToRigth 1s 2s, fadeIn 1s 2s forwards;
+}
+
+main article#git {
+    animation: rigthToLeft 1s 2.5s, fadeIn 1s 2.5s forwards;
+}
+
+main article#wpp i,
+main article#mail i {
+    font-size: 5rem;
+    margin-right: 15px;
+}
+
+main article#linkedin i,
+main article#git i {
+    font-size: 5rem;
+    margin-left: 15px;
 }
 
 footer {
