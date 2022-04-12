@@ -18,7 +18,7 @@ main::-webkit-scrollbar {
 }
 
 main::-webkit-scrollbar-thumb {
-    background-color: var(--scroll);
+    background-color: var(--texto-secundario);
     border-radius: 10px;
 }
 

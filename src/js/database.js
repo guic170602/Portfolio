@@ -33,6 +33,27 @@
             image: '../img/noticiascidade.png',
             title: 'Noticias Cidade',
             info: 'Site de noticias'
+        },
+        {
+            link: 'https://duolingo-seven.vercel.app',
+            github: 'https://github.com/guilherme-colhado/Duolingo',
+            image: '../img/duolingo.png',
+            title: 'Duolingo',
+            info: 'Copia do Duolingo'
+        },
+        {
+            link: 'https://hamburgueria-guilherme-colhado.vercel.app',
+            github: 'https://github.com/guilherme-colhado/Hamburgueria',
+            image: '../img/hamburgueria.png',
+            title: 'Hamburgueria',
+            info: 'Site de hamburgueria'
+        },
+        {
+            link: 'https://pokemon-guilherme-colhado.vercel.app',
+            github: 'https://github.com/guilherme-colhado/PokemonApiList',
+            image: '../img/pokedex.png',
+            title: 'Pokedex',
+            info: 'Demonstração de Pokedex'
         }
     ]
     portfolio(sites)
