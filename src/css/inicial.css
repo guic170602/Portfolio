@@ -121,6 +121,10 @@ main .abilities i {
     background-color: #62dafc;
 }
 
+#node{
+    background-color: #64A358;
+}
+
 footer {
     font-size: 3rem;
     display: flex;
